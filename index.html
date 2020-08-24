@@ -1,0 +1,75 @@
+<!doctype HTML>
+
+<html>
+	<head>
+		<title>Rock. Paper. Scissors. FIGHT!</title>
+		<link rel="stylesheet" type="text/css" href="./css/index.css">
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<header>
+			<img src="./images/logo.png" alt="Rock. Paper. Scissors. FIGHT!">
+		</header>
+		<main>
+			<section id="rulesSection">
+				<img id="pointerImg" src="./images/point.png" alt="pointing finger">
+				<article id="rulesTxt">
+					<h2 class="pixel">The Rules:</h2>
+					<p>Welcome to my online rock paper scissors game! Play against the computer and try to get the
+					longest winning streak you can.
+					This game follows standard rock, paper, scissors rules: Rock beats scissors, but is beaten by paper;
+					Scissors beat paper, but are beaten by rock; Paper beats rock, but is beaten by scissors.
+					<br>
+					<br>
+					If you win against the computer, your win streak will increase. If you lose against the computer,
+					or play the same move as the computer, your win streak will be broken.</p>
+				</article>
+			</section>
+			<hr>
+			<section id="movesSection">
+				<div id="userMove" class="move" >
+					<h2 class="moveTitles pixel ">Your move:</h2>
+					<p id="userChoiceTxt" class="moveChoice"></p>
+					<img id="userChoicePic" src="./images/startUser.jpg" alt="rock">
+				</div>
+				<div id="vs" class="pixel">
+					<p>VS.</p>
+				</div>
+				<div id="computerMove" class="move">
+					<h2 class="moveTitles pixel">Computer move:</h2>
+					<p id="compChoiceTxt" class="moveChoice"></p>
+					<img id="compChoicePic" src="./images/startComp.jpg" alt="rock">
+				</div>
+			</section>
+			<section id="playAgainSection">
+				<p id="message" class="pixel">Start playing now!</p>
+				<form id="play" name="play" action="index.html" onsubmit="return round.playRound();">
+					<div>
+						<label class="pixel">Choose your move:</label>
+						<select id="playerChoice">
+							<option value="Rock">Rock</option>
+							<option value="Paper">Paper</option>
+							<option value="Scissors">Scissors</option>
+						</select>
+					</div>
+					<input id="submit" type="submit" value="Play">
+				</form>
+			</section>
+		</main>
+		<div id="scissors">
+			<img src="./images/scissors.png" alt="scissors">
+		</div>
+		<footer class="pixel">
+		<section id="currentWin">
+				<h2 class="titles">Current Winning Streak</h2>
+				<p id="currentWinNum" class="streaks">0</p>
+			</section>
+			<section id="longestWin">
+				<h2 class="titles">Longest Winning Streak</h2>
+				<p id="longestWinNum" class="streaks">0</p>
+			</section>
+			<a id="creditsLink" href="./html/credits.html" target="_blank">Attributions</a>
+		</footer>
+		<script src="./scripts/index.js"></script>
+	</body>
+</html>
